@@ -8,8 +8,8 @@ import (
 	"flag"
 	"log"
 
+	"github.com/TechXploreLabs/terraform-provider-vertexaitxl/internal/provider"
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
-	"github.com/hashicorp/terraform-provider-vertexaitxl/internal/provider"
 )
 
 var (

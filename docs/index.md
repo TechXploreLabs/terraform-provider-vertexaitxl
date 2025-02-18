@@ -7,7 +7,7 @@ description: |-
 ---
 
 # vertexaitxl Provider
-  The vertexaitxl provider for terraform is capable of generating controlled output from vertexai models such as gemini, gemini pro etc.
+  The vertexaitxl provider for terraform is capable of generating controlled output from vertexai models https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models.
 
 
 ## Example Usage

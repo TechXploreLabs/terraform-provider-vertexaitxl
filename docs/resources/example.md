@@ -7,7 +7,7 @@ description: |-
 
 # vertexaitxl_model_garden (Resource)
 
-  vertexaitxl_model_garden resource generate controlled response for the input prompt w.r.t the response schema.
+  vertexaitxl_model_garden resource generate controlled response for the input prompt w.r.t the response schema. You can control generated output by using models in the link https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models.
 
 ## Example Usage
 

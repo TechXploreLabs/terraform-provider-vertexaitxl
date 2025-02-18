@@ -31,7 +31,7 @@ type VertexaitxlProviderModel struct {
 }
 
 func (p *VertexaitxlProvider) Metadata(ctx context.Context, req provider.MetadataRequest, resp *provider.MetadataResponse) {
-	resp.TypeName = "txltest"
+	resp.TypeName = "vertexaitxl"
 	resp.Version = p.version
 }
 
@@ -39,7 +39,7 @@ func (p *VertexaitxlProvider) Schema(ctx context.Context, req provider.SchemaReq
 	resp.Schema = schema.Schema{
 		Attributes: map[string]schema.Attribute{
 			"credentials": schema.StringAttribute{
-				MarkdownDescription: "Example provider attribute",
+				MarkdownDescription: "Google cloud Platform service account json file path",
 				Optional:            true,
 			},
 		},
