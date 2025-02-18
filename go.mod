@@ -1,4 +1,4 @@
-module github.com/hashicorp/terraform-provider-scaffolding-framework
+module github.com/TechXploreLabs/terraform-provider-vertexaitxl
 
 go 1.22.7
 
