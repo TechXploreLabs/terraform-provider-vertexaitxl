@@ -7,5 +7,5 @@ terraform {
 }
 
 provider "vertexaitxl" {
-  credentials = file("path/to/serviceaccount.json")
+  credentials = "path/to/serviceaccount.json"
 }
