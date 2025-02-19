@@ -25,7 +25,20 @@ Response Schema: Defines a structured output ensuring:
     Subnet list with names, CIDR ranges, and associated regions.
 
 ```terraform
-resource "vertexaitxl_model_garden" "gcp-vpc" {
+terraform {
+  required_providers {
+    vertexaitxl = {
+      source = "TechXploreLabs/vertexaitxl"
+    }
+  }
+}
+
+provider "vertexaitxl" {
+    credentials = "/path/to/serviceaccount.json"  # Alternatively, "gcloud auth application-default login" can be used 
+}
+
+
+resource "vertexaitxl_model_garden" "vpc" {
   prompt     = <<EOF
       Create me a vpc in gcp with five subnet in us-central1 , europe-west1 and europe-west2 region with the range of 10.1.0.0/24 , 10.2.0.0/24 and 10.3.0.0/24 respectively.
       cidr ranges should be non overlapping. 
