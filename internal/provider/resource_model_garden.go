@@ -115,28 +115,7 @@ func convertToGenAISchema(config *Schema) *genai.Schema {
 	if len(config.Properties) > 0 {
 		schema.Properties = make(map[string]*genai.Schema)
 		for propertykey, propertyvalue := range config.Properties {
-			propertySchema := &genai.Schema{
-				Type:          stringToGenAIType(propertyvalue.Type),
-				Format:        propertyvalue.Format,
-				Title:         propertyvalue.Title,
-				Description:   propertyvalue.Description,
-				Nullable:      propertyvalue.Nullable,
-				MinItems:      propertyvalue.MinItems,
-				MaxItems:      propertyvalue.MaxItems,
-				Enum:          propertyvalue.Enum,
-				Required:      propertyvalue.Required,
-				MinProperties: propertyvalue.MinProperties,
-				MaxProperties: propertyvalue.MaxProperties,
-				Minimum:       propertyvalue.Minimum,
-				Maximum:       propertyvalue.Maximum,
-				MinLength:     propertyvalue.MinLength,
-				MaxLength:     propertyvalue.MaxLength,
-				Pattern:       propertyvalue.Pattern,
-			}
-			if propertyvalue.Items != nil {
-				propertySchema.Items = convertToGenAISchema(propertyvalue.Items)
-			}
-			schema.Properties[propertykey] = propertySchema
+			schema.Properties[propertykey] = convertToGenAISchema(propertyvalue)
 		}
 	}
 	if config.Items != nil {
